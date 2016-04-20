@@ -10,15 +10,6 @@ var options = {
     'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0',
   }
 };
-
-// 完整的命令如： node mail.js -d 50 -p 9
-cli.allowUnknownOption()
-   .version( require("./package.json").version )
-   .option("-l, --labels [value]", "issues lable type") //选取最大日期长度
-   .parse( process.argv );
-
-var labels = typeof cli.labels !== undefined && cli.labels ? cli.labels : '';
-
 var getissue = function(){
     return new Promise(function (resolve, reject){
         request(options,  function(err, httpResponse, body) {
@@ -78,6 +69,5 @@ getissue().then(function(data){
             return ['题目:'+value.title+' 链接:'+value.html_url]
         })
         console.log(proofreading_list);
-        // sendMail('issue更新情况', data.join("\n"));
     }
 });
