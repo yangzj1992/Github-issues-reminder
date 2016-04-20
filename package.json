@@ -1,0 +1,33 @@
+{
+  "name": "github-issues-reminder",
+  "version": "1.0.0",
+  "description": "remind your concerned github-issues changes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yangzj1992/Github-issues-reminder.git"
+  },
+  "author": "yangzj1992",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yangzj1992/Github-issues-reminder/issues"
+  },
+  "homepage": "https://github.com/yangzj1992/Github-issues-reminder#readme",
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "commander": "^2.9.0",
+    "nodemailer": "^2.3.2",
+    "request": "^2.72.0"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "^1.1.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
